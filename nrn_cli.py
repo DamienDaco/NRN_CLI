@@ -13,5 +13,10 @@ Options:
 from docopt import docopt
 from app.nrn_generators import *
 
+
+def main():
+    args = docopt(__doc__, version='0.0.1')
+
+
 if __name__ == '__main__':
-    arguments = docopt(__doc__, version='0.0.1')
+    main()
