@@ -11,7 +11,7 @@ Options:
 """
 
 from docopt import docopt
-from app.belgian_nrn_generator import *
+from app.nrn_generators import *
 
 if __name__ == '__main__':
     arguments = docopt(__doc__, version='0.0.1')
