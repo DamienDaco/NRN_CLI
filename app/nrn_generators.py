@@ -10,5 +10,9 @@ class NrnBelgiumSpecific:
         self.day = day
         self.number = number
         self.gender = gender
+        self.yearLast2Digits = self.year[2:]
 
         print(self.year, self.month, self.day, self.number, self.gender)
+
+
+
