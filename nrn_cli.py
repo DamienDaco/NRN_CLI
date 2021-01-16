@@ -2,6 +2,7 @@
 
 Usage:
     nrn_cli.py --be <YEAR> <MONTH> <DAY> <GENDER>
+    nrn_cli.py --isvalid <NUMBER>
     nrn_cli.py [-h | --help]
     nrn_cli.py [--version]
 
@@ -15,6 +16,7 @@ Arguments:
     MONTH       Month of birth, e.g. 01
     DAY         Day of birth, e.g. 20
     GENDER      Gender, Male or Female
+    NUMBER      National number, for validation
 """
 
 import sys
