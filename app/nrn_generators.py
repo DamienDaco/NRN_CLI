@@ -39,3 +39,33 @@ class NrnBelgiumGenerateFromDate:
         self.numberOfBirth = f"{int(self.numberOfBirth):03d}"
 
         self.nrn = self.yearLast2Digits + '.' + self.month + '.' +  self.day + '-' + str(self.numberOfBirth) + '.' + self.controlNumberToString
+
+
+class NrnBelgiumValidator:
+    def __init__(self, string):
+
+        self.rawNumber = string
+        # Remove . and - characters using a list comprehension:
+        self.cleanNumber = "".join([x for x in self.rawNumber if x != '.' if x != '-'])
+
+        if len(self.cleanNumber) == 11:
+
+            self.firstBlock = self.cleanNumber[:9]
+            self.lastBlock = self.cleanNumber[9:11]
+            self.computeControlNumber = 97 - (int(self.firstBlock) % 97)
+
+            if self.computeControlNumber == int(self.lastBlock):
+                print("Number passed validation test.")
+                self.isValid = True
+            else:
+                print("Number failed validation test.")
+                self.isValid = False
+
+        else:
+            print("Invalid number length.")
+            self.isValid = False
+
+
+
+
+
