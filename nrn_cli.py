@@ -25,6 +25,7 @@ from app.nrn_generators import *
 def main():
     args = docopt(__doc__, version='0.0.1')
     gen = NrnBelgiumGenerateFromDate(args['<YEAR>'], args['<MONTH>'], args['<DAY>'], args['<GENDER>'])
+    print(gen.nrn)
 
 
 if __name__ == '__main__':

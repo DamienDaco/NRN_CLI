@@ -1,6 +1,7 @@
 """
 National Register Number generator code for Belgium.
 """
+import random
 
 
 class NrnBelgiumGenerateFromDate:
@@ -10,8 +11,31 @@ class NrnBelgiumGenerateFromDate:
         self.day = day
         self.gender = gender
         self.yearLast2Digits = self.year[2:]
+        self.numberOfBirth = '1'
 
-        print(self.year, self.month, self.day, self.gender)
+        """ Generate a random number of birth.
+        This number helps distinguish people born the same day.
+        Male = odd numbers between 1 and 997.
+        Female = even numbers between 2 and 998.
+        """
+        if self.gender.lower() == 'male':
+            self.numberOfBirth = random.randrange(1, 999, 2)
 
+        elif self.gender.lower() == 'female':
+            self.numberOfBirth = random.randrange(2, 1000, 2)
 
+        self.firstBlock = self.yearLast2Digits + self.month + self.day + str(self.numberOfBirth)
 
+        # If born after 2000, prepend number 2:
+        if int(self.year) >= 2000:
+            self.firstBlock = '2' + self.firstBlock
+
+        # Control number: Modulo firstblock with 97. Substract result from 97:
+        self.controlNumberToString = str(97 - (int(self.firstBlock) % 97))
+        # Ensure control number is always 2 digits long by using an f-string with 00 mask (Prepend zeroes if necessary)
+        self.controlNumberToString = f"{int(self.controlNumberToString):02d}"
+
+        # Ensure number of birth is always 3 digits long by using an f-string with 000 mask (Prepend zeroes if necessary)
+        self.numberOfBirth = f"{int(self.numberOfBirth):03d}"
+
+        self.nrn = self.yearLast2Digits + '.' + self.month + '.' +  self.day + '-' + str(self.numberOfBirth) + '.' + self.controlNumberToString
