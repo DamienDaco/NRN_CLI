@@ -3,7 +3,7 @@ National Register Number generator code for Belgium.
 """
 
 
-class NrnBelgiumSpecific:
+class NrnBelgiumGenerateFromDate:
     def __init__(self, year, month, day, number, gender):
         self.year = year
         self.month = month
