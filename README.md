@@ -48,11 +48,15 @@
 
 > Let's say you want to generate a national number for a female person born the 30th of January 1980:
 
-> python3 nrn_cli.py --be --generate 1980 01 30 FEMALE
+```
+python3 nrn_cli.py --be --generate 1980 01 30 FEMALE
+```
 
 > Display help: 
 
-> python3 nrn_cli.py -h
+```
+python3 nrn_cli.py -h
+```
 
 
 ## License
