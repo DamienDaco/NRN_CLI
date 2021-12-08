@@ -24,7 +24,7 @@
 <summary>Screenshots</summary>
 <br>
 
-| <img src="docs/images/nrn.png" title="Home Page" width="100%"> | <img src="docs/images/nrn.png" title="Login Page" width="100%"> |
+<img src="docs/images/nrn.png" title="Home Page" width="100%">
 
 </details>
 
@@ -36,19 +36,16 @@
 
 ### Prerequisites
 
-> **[?]**
 > docopt
 
 ### Installation
 
-> **[?]**
 > git clone this project
 
 > pip3 install docopt
 
 ## Usage
 
-> **[?]**
 > Let's say you want to generate a national number for a female person born the 30th of January 1980:
 
 > python3 nrn_cli.py --be --generate 1980 01 30 FEMALE
