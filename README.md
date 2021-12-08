@@ -2,14 +2,6 @@
 <div align="center">
   National Registry Number
   <br />
-  <a href="#about"><strong>Explore the screenshots »</strong></a>
-  <br />
-  <br />
-  <a href="https://github.com/DamienDaco/NRN_CLI/issues/new?assignees=&labels=bug&template=01_BUG_REPORT.md&title=bug%3A+">Report a Bug</a>
-  ·
-  <a href="https://github.com/DamienDaco/NRN_CLI/issues/new?assignees=&labels=enhancement&template=02_FEATURE_REQUEST.md&title=feat%3A+">Request a Feature</a>
-  .
-  <a href="https://github.com/DamienDaco/NRN_CLI/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">Ask a Question</a>
 </div>
 
 
@@ -18,7 +10,7 @@
 
 ## About
 
-> **[?]**
+
 > National Number Generator is a command line tool to help generate valid national numbers.
 > Currently, this tool works for Belgian numbers only.
 > The goal is to simplify the creation of test accounts for development purposes.
@@ -32,18 +24,12 @@
 <summary>Screenshots</summary>
 <br>
 
-> **[?]**
-> Please provide your screenshots here.
-
-|                               Home Page                               |                               Login Page                               |
-| :-------------------------------------------------------------------: | :--------------------------------------------------------------------: |
 | <img src="docs/images/nrn.png" title="Home Page" width="100%"> | <img src="docs/images/nrn.png" title="Login Page" width="100%"> |
 
 </details>
 
 ### Built With
 
-> **[?]**
 > Python 3
 
 ## Getting Started
@@ -57,6 +43,7 @@
 
 > **[?]**
 > git clone this project
+
 > pip3 install docopt
 
 ## Usage
