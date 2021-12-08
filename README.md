@@ -42,7 +42,9 @@
 
 > git clone this project
 
-> pip3 install docopt
+```
+pip3 install docopt
+```
 
 ## Usage
 
